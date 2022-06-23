@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.keys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.key {
+  background-color: black;
+  color: white;
+  padding: 20px 45px;
+  border: 5px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.key kbd {
+  font-size: 45px;
+}
+
+.key span {
+  font-size: 20px;
+}
+
+.key.playing {
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
