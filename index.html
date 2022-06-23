@@ -9,10 +9,28 @@
   </head>
   <body>
     <div class="keys">
-      <div class="key">
+      <div data-key="65" class="key">
         <kbd>A</kbd>
         <span class="sound">clap</span>
       </div>
     </div>
+
+    <audio src="sounds/clap.wav" data-key="65"></audio>
+
+    <script>
+      window.addEventListener("keydown", function(e){
+        const key = document.querySelector('.key[data-key="65"]');
+        const audio = document.querySelector('audio[data-key="65"]');
+        if (e.keyCode === 65){
+          audio.currentTime = 0;
+          audio.play()
+          // animation added here
+          key.classList.add("playing")
+          setTimeout(function(){
+            key.classList.remove("playing")
+          }, 100);
+        }
+      })
+    </script>
   </body>
 </html>
