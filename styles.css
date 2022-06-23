@@ -14,13 +14,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 25px;
   min-height: 100vh;
 }
 
 .key {
   background-color: black;
   color: white;
-  padding: 20px 45px;
+  padding: 20px 35px;
+  width: 130px;
   border: 5px solid white;
   border-radius: 10px;
   display: flex;
@@ -35,7 +37,9 @@ body {
 }
 
 .key span {
-  font-size: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: orange;
 }
 
 .key.playing {
